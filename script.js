@@ -29,9 +29,36 @@ document.getElementById('generateTicket').addEventListener('click', function (ev
     event.preventDefault();
     // Creao le variabili per prendere i dati dell'utente dal dom
 
-    const nameSurname = document.getElementById('namaSurname').value;
+    const nameSurname = document.getElementById('nameSurname').value;
     const kilometers = document.getElementById('km').value;
     const ageCategory = document.getElementById('age').value;
+
+    // Prezzo del biglietto
+
+    let ticketPrice = kilometers * 0.21;
+    let offer = 'Biglietto standard';
+
+    // applico lo sconto in base alla fascia d'età, come fatto in precedenza copio ed incollo l'operazione
+
+    if (ageCategory === 'Minorenne') {
+        discount = (ticketPrice * 20) / 100; // Sconto 20% 
+        ticketPrice = ticketPrice - discount;
+        offer = 'Sconto Minorenni';
+
+    } else if (ageCategory === 'over65') {
+        discount = (ticketPrice * 40) / 100; // Sconto 40% 
+        ticketPrice = ticketPrice - discount;
+        offer = 'Sconto Over 65';
+    }
+
+    // stampo i dettagli dell'utente nella tabella
+
+    document.getElementById('passengerName').textContent = nameSurname;
+
+
+
+
+
 
 
 
