@@ -38,7 +38,35 @@
                     <button id="cancel" class="btn btn-secondary">Annulla</button>
                 </div>
             </section>
-        </div>                
+        </div> 
+        
+        <!-- Dettagli dell'utente -->
+
+        <section class="mt-5">
+            <h2 class="text-center">IL TUO BIGLIETTO</h2>
+            <!-- Creazione della tabella per i dettagli del biglietto sempre usando bootstrap e risorse online per velocizzare il lavoro-->
+            <table class="table table-bordered table-striped mt-4">
+                <thead>
+                    <tr class="table-dark text-center">
+                        <th>DETTAGLIO PASSEGGERI</th>
+                        <th>Offerta</th>
+                        <th>Carrozza</th>
+                        <th>Codice CP</th>
+                        <th>Costo Biglietto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center">
+                        <td id="passengerName" class="bg-secondary text-light"></td>
+                        <td id="offer">Biglietto Standard</td>
+                        <td id="carriage">5</td>
+                        <td id="cpCode">92911</td>
+                        <td id="ticketCost"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    
            
         
     </main>
