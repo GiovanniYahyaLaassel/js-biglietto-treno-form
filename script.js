@@ -61,16 +61,22 @@ document.getElementById('generateTicket').addEventListener('click', function (ev
 
 
 // Cerco di evitare  di nuovo il refresh della pagina
-document.getElementById('generateTicket').addEventListener('click', function (event) {
+document.getElementById('cancel').addEventListener('click', function (event) {
     event.preventDefault();
 
 
-})
 
 // Aggiungo una funzione per il tasto Anulla per ressettare il valori della tabella
 
-document.getElementById('passengerName').value = '';
-document.getElementById('offer').value = '';
-document.getElementById('agw').value = 'Maggiorenne';
+document.getElementById('nameSurname').value = '';
+document.getElementById('km').value = '';
+document.getElementById('age').value = 'Maggiorenne';
+
+document.getElementById('passengerName').textContent = '';
+document.getElementById('offer').textContent = 'Biglietto standard';
+document.getElementById('ticketCost').textContent = '';
+
+});
+
 
 
