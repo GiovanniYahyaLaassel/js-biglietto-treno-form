@@ -54,14 +54,23 @@ document.getElementById('generateTicket').addEventListener('click', function (ev
     // stampo i dettagli dell'utente nella tabella
 
     document.getElementById('passengerName').textContent = nameSurname;
+    document.getElementById('offer').textContent = offer;
+    document.getElementById('ticketCost').textContent = ticketPrice.toFixed(2) + '€';
+
+});
 
 
-
-
-
-
-
+// Cerco di evitare  di nuovo il refresh della pagina
+document.getElementById('generateTicket').addEventListener('click', function (event) {
+    event.preventDefault();
 
 
 })
+
+// Aggiungo una funzione per il tasto Anulla per ressettare il valori della tabella
+
+document.getElementById('passengerName').value = '';
+document.getElementById('offer').value = '';
+document.getElementById('agw').value = 'Maggiorenne';
+
 
